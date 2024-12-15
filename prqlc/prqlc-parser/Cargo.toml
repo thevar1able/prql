@@ -26,7 +26,7 @@ strum = {version = "0.26.3", features = ["std", "derive"]}
 # see it when compiling on macOS), so we only include features when running
 # outside wasm.
 [target.'cfg(not(target_family="wasm"))'.dependencies]
-chumsky = "0.9.2"
+chumsky = { git = "https://github.com/zesterer/chumsky", rev = "9d1ee8ce20482a070085e825fe2dc5333858db72" }
 # Not direct dependencies, but pinning because of bugs in previous versions
 stacker = "0.1.17"
 [target.'cfg(target_family="wasm")'.dependencies]
